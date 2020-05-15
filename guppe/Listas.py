@@ -178,6 +178,7 @@ num4 = 4
 num5 = 5
 numeros = [num1, num2, num3, num4, num5]
 print(numeros)
+# fazemos acesso aos elementos de forma indexada
 
 cores = ['verde', 'amarelo', 'azul', 'branco']
 print(cores[0])
@@ -196,7 +197,143 @@ while indice < len(cores):
     print(cores[indice] + ' imprimindo as cor com While ')
     indice = indice + 1
 
+cores = ['verde', 'amarelo', 'azul', 'branco']
+# Gerar indice em um for
 
+for indice, cor in enumerate(cores):
+    print(indice, cor)
+
+
+# listas aceitam valores repetidos
+lista = []
+lista.append(42)
+lista.append(42)
+lista.append(42)
+lista.append(43)
+print(lista)
+
+# Outros métodos não tão importantes mais também uteis
+
+# Encontrar o indice de um elemento na lista
+
+# em qual indice esta o valor 6?
+numeros = [5, 6, 7, 8, 9, 10]
+print(numeros.index(6))
+
+# em qual indice esta o valor 9?
+numeros = [5, 6, 7, 8, 9, 10]
+print(numeros.index(9))
+
+# OBS: Caso o elemento nao exista na lista, será apresentado erro
+#numeros = [5, 6, 7, 8, 9, 10]
+#print(numeros.index(19))
+
+# caso haja elemento duplicado, sera retornado o indice do primeiro elemento encontrado
+numeros = [5, 6, 7, 5, 8, 9, 10]
+print(numeros.index(5))
+
+# Podemos fazer busca dentro de um range, ou seja, qual indice começar a buscar
+# buscando a partir do indice 1
+print(numeros.index(5, 1))
+print(numeros.index(5, 2))
+print(numeros.index(5, 3))
+print(numeros.index(5, 4))
+# OBS: Caso o elemento nao exista na lista, será apresentado erro
+
+# Podemos fazer busca dentro de um range, inicio/fim
+# Buscar o indice o valor 8 entre o valor 3 e 6
+print(numeros.index(8, 3, 6))
+
+#Revisao do slicing
+
+#lista[inicio:fim:passo]
+#range(inicio:fim:passo)
+
+#trabalhando com slice de lista com o parametro 'inicio'
+lista = [1, 2, 3, 4]
+print(lista[:]) # pegando todos os elementos
+print(lista[1:]) # iniciando no indice 1 e pegando todos os elementos restantes
+print(lista[::-1]) # invertendo a leitura de uma lista
+
+#trabalhando com slice de lista com o parametro 'fim'
+print(lista[:2]) #comeca em 0, pega ate o indice 2 - 1
+print(lista[:4]) #comeca em 0, pega ate o indice 4 - 1
+print(lista[1:3]) # comeca em 1, pega ate o indice 3 - 1
+
+#trabalhando com slice de lista com o parametro 'passo'
+
+print(lista[1::2]) # começa em 1, vai até o final de 2 em 2
+
+print(lista[::2]) # começa em 0, vai até o final de 2 em 2
+
+# Invertendo valores em uma lista
+
+nome = ['Marcos', 'Luiz', 'Jesus']
+nome[0], nome[1], nome[2] = nome[2], nome[1], nome[0]
+print(nome)
+
+nome.reverse()
+print(nome)
+# Transformar lista em tupla
+
+lista = [1, 2, 3, 4, 5, 6]
+print(lista)
+print(type(lista))
+
+tupla = tuple(lista)
+print(type(tupla))
+print(tupla)
+# Soma*, Valor Maximo*, Valor Minimo*, Tamanho
+# * Se os valores forem todos inteiros ou reais
+
+lista = [1, 2, 3, 4, 5, 6]
+print(sum(lista)) #soma
+print(max(lista)) #maior valor
+print(min(lista)) #menor valor
+print(len(lista)) #tamanho da lista
+
+# Desempacotamento de listas
+
+
+lista = [1, 2, 3, 4]
+num1, num2, num3, num4 = lista
+
+print(num1)
+print(num2)
+print(num3)
+print(num4)
+
+
+# Copiando uma lista para outra (Shallow Copy e Deep Copy)
+
+# forma 1
+# Ao utilizar o lista.copy(), copiamos os dados da lista para nova lista, mas elas ficaram totalmente
+# independentes, ou seja, modificando uma lista, nao afeta a outra. Isso em Python
+# é chamado de Deep Copy (copia profunda)
+
+lista = [1, 2, 3]
+print(lista)
+
+nova = lista.copy()
+
+print(nova)
+
+nova.append(4)
+print(lista)
+print(nova)
+
+# Forma 2 Shallow copy
+# Veja, que utilizamos a copia via atribuição e copiamos o dados da lista para a nova lista, mas apos
+# realizar modificação em uma das lista, essa modificação se refletiu em ambas as listas. Isto em Python
+# é chamado de Shallow Copy
+lista = [5, 6, 7]
+print(lista)
+
+nova = lista
+nova.append(4)
+
+print(lista)
+print(nova)
 """
 
 type([])
@@ -212,14 +349,6 @@ lista4 = list(range(11))
 lista5 = list('Marcos Luiz de Jesus')
 
 
-# fazemos acesso aos elementos de forma indexada
-
-cores = ['verde', 'amarelo', 'azul', 'branco']
-
-# Gerar indice em um for
-
-for indice, cor in enumerate(cores):
-    print(indice, cor)
 
 
 
