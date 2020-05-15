@@ -179,6 +179,24 @@ num5 = 5
 numeros = [num1, num2, num3, num4, num5]
 print(numeros)
 
+cores = ['verde', 'amarelo', 'azul', 'branco']
+print(cores[0])
+print(cores[1])
+print(cores[2])
+print(cores[3])
+
+# fazer acesso aos elementos de forma inversa
+print(cores[-2]) #azul
+
+for cor in cores:
+    print(cor + ' imprimindo a cor com For')
+
+indice = 0
+while indice < len(cores):
+    print(cores[indice] + ' imprimindo as cor com While ')
+    indice = indice + 1
+
+
 """
 
 type([])
@@ -197,10 +215,11 @@ lista5 = list('Marcos Luiz de Jesus')
 # fazemos acesso aos elementos de forma indexada
 
 cores = ['verde', 'amarelo', 'azul', 'branco']
-print(cores[0])
-print(cores[1])
-print(cores[2])
-print(cores[3])
 
-# fazer acesso aos elementos de forma inversa
-print(cores[-2]) #azul
+# Gerar indice em um for
+
+for indice, cor in enumerate(cores):
+    print(indice, cor)
+
+
+
