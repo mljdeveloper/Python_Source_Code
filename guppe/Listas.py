@@ -143,6 +143,42 @@ nome = 'marcos luiz de jesus'
 nome = '*'.join(nome)
 print(nome)
 
+# podemos realmente colocar qualquer tipo de dado em uma lista, inclusive misturando dados
+lista6 = [1, 2.3, True, 'Marcos', 'd', [1, 2, 4], 545454545454]
+print(lista6)
+
+
+# Exemplo 1 - Utilizando for
+soma = 0
+for elemento in lista1:
+    print(elemento)
+    soma = soma + elemento
+print(soma)
+
+# Exemplo 2 = Utilizando while
+
+carrinho = []
+produto = ''
+while produto != 'sair':
+    print("Adicione um produto na lista ou digite 'sair' para sair: ")
+    produto=input()
+    if produto != 'sair':
+        carrinho.append(produto)
+
+for produto in carrinho:
+    print(produto)
+
+# Utilizando variaveis em listas
+numeros = [1, 2, 3, 4, 5]
+print(numeros)
+num1 = 1
+num2 = 2
+num3 = 3
+num4 = 4
+num5 = 5
+numeros = [num1, num2, num3, num4, num5]
+print(numeros)
+
 """
 
 type([])
@@ -157,5 +193,14 @@ lista4 = list(range(11))
 
 lista5 = list('Marcos Luiz de Jesus')
 
-lista6 = [1, 2.3, True, 'Marcos', 'd', [1, 2, 4]]
-print(lista6)
+
+# fazemos acesso aos elementos de forma indexada
+
+cores = ['verde', 'amarelo', 'azul', 'branco']
+print(cores[0])
+print(cores[1])
+print(cores[2])
+print(cores[3])
+
+# fazer acesso aos elementos de forma inversa
+print(cores[-2]) #azul
