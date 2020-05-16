@@ -89,8 +89,6 @@ print(len(cidades))
 
 print(len(set(cidades))) # set elimina duplicidade
 
-"""
-
 # Adicionando elementos em um conjunto
 s = {1, 2, 3}
 s.add(4)
@@ -98,5 +96,92 @@ print(s)
 print(type(s))
 
 print(dir(set))
+
+# Remover elementos em um conjunto
+#Forma 1
+s.remove(3) #Não é indice! Informamos o valor a ser removido
+OBS: Caso o valor não exista, sera gerado um KeyError
+OBS2: Caso seja excluido, nenhum valor é retornado
+print(s)
+
+# Forma 2
+s.discard(2) # Caso o valor não exista, não sera gerado Erro.
+print(s)
+
+#Copiando um conjunto para outro..
+
+# Forma 1 - Deep Copy
+
+novo = s.copy()
+print(novo)
+
+novo.add(4)
+print(novo)
+print(s)
+
+# forma 2 - Shallow Copy
+
+novo = s
+novo.add(4)
+print(novo)
+print(s)
+
+# Podemos limpar todos os itens do conjunto
+s.clear()
+print(s)
+
+# Veja que alguns alunos estudam Python tambem estudam Java
+
+# Precisamos gerar um conjunto com nomes de estudantes unicos
+
+# Forma 1 - Utilizando union
+unicos1 = estudante_python.union(estudante_java)
+print(unicos1)
+
+# Forma 2 - Utilizando o caracter pipe |
+unicos2 = estudante_python | estudante_java
+print(unicos2)
+
+
+# Gerar um conjunto de estudantes que estão em ambos os cursos
+
+# Forma 1 - utilizando intersection
+
+ambos1 = estudante_python.intersection(estudante_java)
+print(ambos1)
+# Forma 2 - Utilizando o &
+ambos2 = estudante_java & estudante_python
+print(ambos2)
+
+
+s = {1, 2, 3}
+
+# Métodos Matemáticos de Conjuntos
+
+# Imagine que temos dois conjuntos: Um contendo estudantes do curso Python e um
+# contendo estudantes do curso de Java.
+
+estudante_python = {'Marcos', 'Patricia', 'Ellen', 'Pedro', 'Julia', 'Guilherme'}
+estudante_java = {'Fernando', 'Gustavo', 'Patricia','Julia', 'Ana'}
+
+# Gerar um conjunto de estudantes de um curso que não estão no outro.
+
+so_python = estudante_python.difference(estudante_java)
+print(so_python)
+
+so_java = estudante_java.difference(estudante_python)
+print(so_java)
+
+
+# Soma*, valor maximo*, valor minimo*, tamanho
+# * Se os valores forem todos inteiros ou reais
+s = {1, 2, 3, 4, 5, 6}
+print(sum(s))
+print(max(s))
+print(min(s))
+print(len(s))
+
+"""
+
 
 
