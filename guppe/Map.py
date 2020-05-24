@@ -60,6 +60,8 @@ print(cidades)
 # f = 9/5 * c + 32
 
 # Lambda
+# dado[0] = nome da cidade
+# dado[1] = temperatura em centigrado da cidade, citado na lista acima
 
 c_para_f = lambda dado: (dado[0], (9/5 * dado[1] + 32))
 
