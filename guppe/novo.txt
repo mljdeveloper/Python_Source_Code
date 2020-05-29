@@ -1,0 +1,3 @@
+Escrever dados em arquivos que o marcos ta criando. 
+Podemos colocar quantas linhas quisermos. 
+Esta é a ultima linha.
